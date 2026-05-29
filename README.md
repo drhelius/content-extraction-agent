@@ -131,14 +131,3 @@ Edit [prompts/extraction_prompt.md](prompts/extraction_prompt.md). The agent sub
 - `$image_file`
 
 Keep the prompt strict about returning JSON only. The agent validates the response and retries invalid JSON according to `max_retries`.
-
-## Repository Hygiene
-
-The repository intentionally ignores local runtime files:
-
-- `.env` for secrets and deployment-specific values.
-- `.venv/` for the local Python environment.
-- `outputs/` for generated extraction runs.
-- `examples/` for local PDFs and test documents.
-
-Use [.env.example](.env.example) and [config.yaml](config.yaml) as the committed templates for configuration.
