@@ -1,0 +1,54 @@
+{
+  "document_name": "386.pdf",
+  "page_number": 66,
+  "page_summary": "Manual page from Intel Application Programming describing IMUL behavior and section 3.2.4 Division Instructions, including DIV and a table of operands for division.",
+  "fields": {
+    "header": "APPLICATION PROGRAMMING",
+    "section": "3.2.4 Division Instructions",
+    "subsection": "DIV (Unsigned Integer Divide)",
+    "page_footer": "3-9",
+    "table_title": "Table 3-1. Operands for Division"
+  },
+  "tables": [
+    {
+      "title": "Table 3-1. Operands for Division",
+      "columns": [
+        "Operand Size (Divisor)",
+        "Dividend",
+        "Quotient",
+        "Remainder"
+      ],
+      "rows": [
+        {
+          "Operand Size (Divisor)": "Byte",
+          "Dividend": "AX register",
+          "Quotient": "AL register",
+          "Remainder": "AH register"
+        },
+        {
+          "Operand Size (Divisor)": "Word",
+          "Dividend": "DX and AX",
+          "Quotient": "AX register",
+          "Remainder": "DX register"
+        },
+        {
+          "Operand Size (Divisor)": "Doubleword",
+          "Dividend": "EDX and EAX",
+          "Quotient": "EAX register",
+          "Remainder": "EDX register"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "The immediate operand is a two's complement signed integer. If the immediate operand is a byte, the processor automatically sign-extends it to the size of the second operand before performing the multiplication.",
+    "The three forms are similar in most respects:",
+    "The length of the product is calculated to twice the length of the operands.",
+    "The CF and OF flags are set when significant bits are carried into the upper half of the result. The CF and OF flags are cleared when the upper half of the result is the sign-extension of the lower half. The state of the SF, ZF, AF, and PF flags is undefined.",
+    "However, forms 2 and 3 differ because the product is truncated to the length of the operands before it is stored in the destination register. Because of this truncation, the OF flag should be tested to ensure that no significant bits are lost. (For ways to test the OF flag, see the JO, INTO, and PUSHF instructions.)",
+    "Forms 2 and 3 of IMUL also may be used with unsigned operands because, whether the operands are signed or unsigned, the lower half of the product is the same. The CF and OF flags, however, cannot be used to determine if the upper half of the result is non-zero.",
+    "The 386 SX microprocessor has separate division instructions for unsigned and signed operands. The DIV instruction operates on unsigned integers, while the IDIV instruction operates on both signed and unsigned integers. In either case, a divide-error exception is generated if the divisor is zero or if the quotient is too large for the AL, AX, or EAX register.",
+    "DIV (Unsigned Integer Divide) performs an unsigned division of the AL, AX, or EAX register by the source operand. The dividend (the accumulator) is twice the size of the divisor (the source operand); the quotient and remainder have the same size as the divisor, as shown in Table 3-1.",
+    "Non-integral results are truncated toward 0. The remainder is always smaller than the divisor. For unsigned byte division, the largest quotient is 255. For unsigned word division, the largest quotient is 65,535. For unsigned doubleword division the largest quotient is 2^32 - 1. The state of the OF, SF, ZF, AF, PF, and CF flags is undefined."
+  ]
+}

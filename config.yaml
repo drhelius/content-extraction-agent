@@ -1,0 +1,35 @@
+# Runtime configuration for the PDF extraction agent.
+# Secrets are read from .env or environment variables, not committed here.
+
+azure_openai:
+  # Use azure_cli to reuse `az login`. Other supported values: default_credential, api_key.
+  auth_mode: azure_cli
+  auth_mode_env: AZURE_OPENAI_AUTH_MODE
+  endpoint_env: AZURE_OPENAI_ENDPOINT
+  api_key_env: AZURE_OPENAI_API_KEY
+  deployment_env: AZURE_OPENAI_DEPLOYMENT
+  api_version_env: AZURE_OPENAI_API_VERSION
+  tenant_id_env: AZURE_TENANT_ID
+  # Use auto so v1 uses https://ai.azure.com/.default and dated APIs use Cognitive Services.
+  token_scope: auto
+  azure_cli_process_timeout_seconds: 60
+  default_api_version: v1
+
+pdf:
+  dpi: 150
+  image_format: png
+
+extraction:
+  prompt_path: prompts/extraction_prompt.md
+  output_root: outputs
+  image_detail: high
+  max_tokens: 8000
+  # GPT-5.x deployments require max_completion_tokens. Older chat models may use max_tokens.
+  token_parameter: max_completion_tokens
+  temperature: 0
+  response_format: json_object
+  max_retries: 3
+  retry_base_delay_seconds: 2
+  request_delay_seconds: 0
+  save_raw_responses: true
+  continue_on_error: true

@@ -1,0 +1,142 @@
+{
+  "document_name": "386.pdf",
+  "page_number": 82,
+  "page_summary": "Manual page titled APPLICATION PROGRAMMING showing Table 3-3, Conditional Jump Instructions, with unsigned and signed conditional jump mnemonics, flag states, and descriptions, followed by explanatory paragraphs for LOOP, LOOPE/LOOPZ, and LOOPNE/LOOPNZ instructions.",
+  "fields": {
+    "header": "APPLICATION PROGRAMMING",
+    "table_title": "Table 3-3. Conditional Jump Instructions",
+    "page_footer": "3-25"
+  },
+  "tables": [
+    {
+      "title": "Table 3-3. Conditional Jump Instructions",
+      "sections": [
+        {
+          "section_title": "Unsigned Conditional Jumps",
+          "columns": [
+            "Mnemonic",
+            "Flag States",
+            "Description"
+          ],
+          "rows": [
+            {
+              "Mnemonic": "JA/JNBE",
+              "Flag States": "(CF or ZF) = 0",
+              "Description": "above/not below nor equal"
+            },
+            {
+              "Mnemonic": "JAE/JNB",
+              "Flag States": "CF = 0",
+              "Description": "above or equal/not below"
+            },
+            {
+              "Mnemonic": "JB/JNAE",
+              "Flag States": "CF = 1",
+              "Description": "below/not above nor equal"
+            },
+            {
+              "Mnemonic": "JBE/JNA",
+              "Flag States": "(CF or ZF) =1",
+              "Description": "below or equal/not above"
+            },
+            {
+              "Mnemonic": "JC",
+              "Flag States": "CF = 1",
+              "Description": "carry"
+            },
+            {
+              "Mnemonic": "JE/JZ",
+              "Flag States": "ZF = 1",
+              "Description": "equal/zero"
+            },
+            {
+              "Mnemonic": "JNC",
+              "Flag States": "CF = 0",
+              "Description": "not carry"
+            },
+            {
+              "Mnemonic": "JNE/JNZ",
+              "Flag States": "ZF = 0",
+              "Description": "not equal/not zero"
+            },
+            {
+              "Mnemonic": "JNP/JPO",
+              "Flag States": "PF = 0",
+              "Description": "not parity/parity odd"
+            },
+            {
+              "Mnemonic": "JP/JPE",
+              "Flag States": "PF = 1",
+              "Description": "parity/parity even"
+            }
+          ]
+        },
+        {
+          "section_title": "Signed Conditional Jumps",
+          "columns": [
+            "Mnemonic",
+            "Flag States",
+            "Description"
+          ],
+          "rows": [
+            {
+              "Mnemonic": "JG/JNLE",
+              "Flag States": "((SF xor OF) or ZF) = 0",
+              "Description": "greater/not less nor equal"
+            },
+            {
+              "Mnemonic": "JGE/JNL",
+              "Flag States": "(SF xor OF) = 0",
+              "Description": "greater or equal/not less"
+            },
+            {
+              "Mnemonic": "JL/JNGE",
+              "Flag States": "(SF xor OF) = 1",
+              "Description": "less/not greater nor equal"
+            },
+            {
+              "Mnemonic": "JLE/JNG",
+              "Flag States": "((SF xor OF) or ZF) = 1",
+              "Description": "less or equal/not greater"
+            },
+            {
+              "Mnemonic": "JNO",
+              "Flag States": "OF = 0",
+              "Description": "not overflow"
+            },
+            {
+              "Mnemonic": "JNS",
+              "Flag States": "SF = 0",
+              "Description": "not sign (non-negative)"
+            },
+            {
+              "Mnemonic": "JO",
+              "Flag States": "OF = 1",
+              "Description": "overflow"
+            },
+            {
+              "Mnemonic": "JS",
+              "Flag States": "SF = 1",
+              "Description": "sign (negative)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "LOOP (Loop While ECX Not Zero) is a conditional jump instruction which decrements the contents of the ECX register before testing for the loop-terminating condition.",
+    "If contents of the ECX register are non-zero, the program jumps to the destination specified in the instruction.",
+    "The LOOP instruction causes the execution of a block of code to be repeated until the count reaches zero.",
+    "When zero is reached, execution is transferred to the instruction immediately following the LOOP instruction.",
+    "If the value in the ECX register is zero when the instruction is first called, the count is predecremented to 0FFFFFFFFH and the LOOP runs 2^32 times.",
+    "LOOPE (Loop While Equal) and LOOPZ (Loop While Zero) are synonyms for the same instruction.",
+    "These instructions are conditional jumps which decrement the contents of the ECX register before testing for the loop-terminating condition.",
+    "If the contents of the ECX register are non-zero and the ZF flag is set, the program jumps to the destination specified in the instruction.",
+    "When zero is reached or the ZF flag is clear, execution is transferred to the instruction immediately following the LOOPE/LOOPZ instruction.",
+    "LOOPNE (Loop While Not Equal) and LOOPNZ (Loop While Not Zero) are synonyms for the same instruction.",
+    "These instructions are conditional jumps which decrement the contents of the ECX register before testing for the loop-terminating condition.",
+    "If the contents of the ECX register are non-zero and the ZF flag is clear, the program jumps to the destination specified in the instruction.",
+    "When zero is reached or the ZF flag is set, execution is transferred to the instruction immediately following the LOOPE/LOOPZ instruction."
+  ]
+}

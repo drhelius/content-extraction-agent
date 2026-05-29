@@ -1,0 +1,103 @@
+{
+  "id": "chatcmpl-Dk1TBCLnmgUctJxiz1QL29Gcj98bp",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"document_name\": \"386.pdf\",\n  \"page_number\": 66,\n  \"page_summary\": \"Manual page from Intel Application Programming describing IMUL behavior and section 3.2.4 Division Instructions, including DIV and a table of operands for division.\",\n  \"fields\": {\n    \"header\": \"APPLICATION PROGRAMMING\",\n    \"section\": \"3.2.4 Division Instructions\",\n    \"subsection\": \"DIV (Unsigned Integer Divide)\",\n    \"page_footer\": \"3-9\",\n    \"table_title\": \"Table 3-1. Operands for Division\"\n  },\n  \"tables\": [\n    {\n      \"title\": \"Table 3-1. Operands for Division\",\n      \"columns\": [\n        \"Operand Size (Divisor)\",\n        \"Dividend\",\n        \"Quotient\",\n        \"Remainder\"\n      ],\n      \"rows\": [\n        {\n          \"Operand Size (Divisor)\": \"Byte\",\n          \"Dividend\": \"AX register\",\n          \"Quotient\": \"AL register\",\n          \"Remainder\": \"AH register\"\n        },\n        {\n          \"Operand Size (Divisor)\": \"Word\",\n          \"Dividend\": \"DX and AX\",\n          \"Quotient\": \"AX register\",\n          \"Remainder\": \"DX register\"\n        },\n        {\n          \"Operand Size (Divisor)\": \"Doubleword\",\n          \"Dividend\": \"EDX and EAX\",\n          \"Quotient\": \"EAX register\",\n          \"Remainder\": \"EDX register\"\n        }\n      ]\n    }\n  ],\n  \"notes\": [\n    \"The immediate operand is a two's complement signed integer. If the immediate operand is a byte, the processor automatically sign-extends it to the size of the second operand before performing the multiplication.\",\n    \"The three forms are similar in most respects:\",\n    \"The length of the product is calculated to twice the length of the operands.\",\n    \"The CF and OF flags are set when significant bits are carried into the upper half of the result. The CF and OF flags are cleared when the upper half of the result is the sign-extension of the lower half. The state of the SF, ZF, AF, and PF flags is undefined.\",\n    \"However, forms 2 and 3 differ because the product is truncated to the length of the operands before it is stored in the destination register. Because of this truncation, the OF flag should be tested to ensure that no significant bits are lost. (For ways to test the OF flag, see the JO, INTO, and PUSHF instructions.)\",\n    \"Forms 2 and 3 of IMUL also may be used with unsigned operands because, whether the operands are signed or unsigned, the lower half of the product is the same. The CF and OF flags, however, cannot be used to determine if the upper half of the result is non-zero.\",\n    \"The 386 SX microprocessor has separate division instructions for unsigned and signed operands. The DIV instruction operates on unsigned integers, while the IDIV instruction operates on both signed and unsigned integers. In either case, a divide-error exception is generated if the divisor is zero or if the quotient is too large for the AL, AX, or EAX register.\",\n    \"DIV (Unsigned Integer Divide) performs an unsigned division of the AL, AX, or EAX register by the source operand. The dividend (the accumulator) is twice the size of the divisor (the source operand); the quotient and remainder have the same size as the divisor, as shown in Table 3-1.\",\n    \"Non-integral results are truncated toward 0. The remainder is always smaller than the divisor. For unsigned byte division, the largest quotient is 255. For unsigned word division, the largest quotient is 65,535. For unsigned doubleword division the largest quotient is 2^32 - 1. The state of the OF, SF, ZF, AF, PF, and CF flags is undefined.\"\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      },
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "created": 1779861109,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "service_tier": "default",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 828,
+    "prompt_tokens": 1231,
+    "total_tokens": 2059,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 11,
+      "engine_ttft_ms": 509,
+      "engine_ttlt_ms": 9442,
+      "pre_inference_ms": 185,
+      "service_tbt_ms": 11,
+      "service_ttft_ms": 944,
+      "service_ttlt_ms": 9878,
+      "total_duration_ms": 9708,
+      "user_visible_ttft_ms": 759
+    }
+  },
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ]
+}

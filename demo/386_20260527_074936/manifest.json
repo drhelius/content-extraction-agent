@@ -1,0 +1,19 @@
+{
+  "document_name": "386.pdf",
+  "source_pdf": "examples/386.pdf",
+  "output_dir": "demo/386_20260527_074936",
+  "total_pdf_pages": 544,
+  "rendered_pages": 1,
+  "dry_run": false,
+  "pages": [
+    {
+      "page_number": 82,
+      "status": "ok",
+      "image_path": "demo/386_20260527_074936/pages/page_0082.png",
+      "json_path": "demo/386_20260527_074936/json/page_0082.json",
+      "raw_response_path": "demo/386_20260527_074936/raw_responses/page_0082.response.json"
+    }
+  ],
+  "extracted_pages": 1,
+  "failed_pages": 0
+}

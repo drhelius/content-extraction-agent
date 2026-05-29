@@ -1,0 +1,103 @@
+{
+  "id": "chatcmpl-Dk1R9dRD7CK9uUCfmLBCaXld1QAiA",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"document_name\": \"386.pdf\",\n  \"page_number\": 82,\n  \"page_summary\": \"Manual page titled APPLICATION PROGRAMMING showing Table 3-3, Conditional Jump Instructions, with unsigned and signed conditional jump mnemonics, flag states, and descriptions, followed by explanatory paragraphs for LOOP, LOOPE/LOOPZ, and LOOPNE/LOOPNZ instructions.\",\n  \"fields\": {\n    \"header\": \"APPLICATION PROGRAMMING\",\n    \"table_title\": \"Table 3-3. Conditional Jump Instructions\",\n    \"page_footer\": \"3-25\"\n  },\n  \"tables\": [\n    {\n      \"title\": \"Table 3-3. Conditional Jump Instructions\",\n      \"sections\": [\n        {\n          \"section_title\": \"Unsigned Conditional Jumps\",\n          \"columns\": [\n            \"Mnemonic\",\n            \"Flag States\",\n            \"Description\"\n          ],\n          \"rows\": [\n            {\n              \"Mnemonic\": \"JA/JNBE\",\n              \"Flag States\": \"(CF or ZF) = 0\",\n              \"Description\": \"above/not below nor equal\"\n            },\n            {\n              \"Mnemonic\": \"JAE/JNB\",\n              \"Flag States\": \"CF = 0\",\n              \"Description\": \"above or equal/not below\"\n            },\n            {\n              \"Mnemonic\": \"JB/JNAE\",\n              \"Flag States\": \"CF = 1\",\n              \"Description\": \"below/not above nor equal\"\n            },\n            {\n              \"Mnemonic\": \"JBE/JNA\",\n              \"Flag States\": \"(CF or ZF) =1\",\n              \"Description\": \"below or equal/not above\"\n            },\n            {\n              \"Mnemonic\": \"JC\",\n              \"Flag States\": \"CF = 1\",\n              \"Description\": \"carry\"\n            },\n            {\n              \"Mnemonic\": \"JE/JZ\",\n              \"Flag States\": \"ZF = 1\",\n              \"Description\": \"equal/zero\"\n            },\n            {\n              \"Mnemonic\": \"JNC\",\n              \"Flag States\": \"CF = 0\",\n              \"Description\": \"not carry\"\n            },\n            {\n              \"Mnemonic\": \"JNE/JNZ\",\n              \"Flag States\": \"ZF = 0\",\n              \"Description\": \"not equal/not zero\"\n            },\n            {\n              \"Mnemonic\": \"JNP/JPO\",\n              \"Flag States\": \"PF = 0\",\n              \"Description\": \"not parity/parity odd\"\n            },\n            {\n              \"Mnemonic\": \"JP/JPE\",\n              \"Flag States\": \"PF = 1\",\n              \"Description\": \"parity/parity even\"\n            }\n          ]\n        },\n        {\n          \"section_title\": \"Signed Conditional Jumps\",\n          \"columns\": [\n            \"Mnemonic\",\n            \"Flag States\",\n            \"Description\"\n          ],\n          \"rows\": [\n            {\n              \"Mnemonic\": \"JG/JNLE\",\n              \"Flag States\": \"((SF xor OF) or ZF) = 0\",\n              \"Description\": \"greater/not less nor equal\"\n            },\n            {\n              \"Mnemonic\": \"JGE/JNL\",\n              \"Flag States\": \"(SF xor OF) = 0\",\n              \"Description\": \"greater or equal/not less\"\n            },\n            {\n              \"Mnemonic\": \"JL/JNGE\",\n              \"Flag States\": \"(SF xor OF) = 1\",\n              \"Description\": \"less/not greater nor equal\"\n            },\n            {\n              \"Mnemonic\": \"JLE/JNG\",\n              \"Flag States\": \"((SF xor OF) or ZF) = 1\",\n              \"Description\": \"less or equal/not greater\"\n            },\n            {\n              \"Mnemonic\": \"JNO\",\n              \"Flag States\": \"OF = 0\",\n              \"Description\": \"not overflow\"\n            },\n            {\n              \"Mnemonic\": \"JNS\",\n              \"Flag States\": \"SF = 0\",\n              \"Description\": \"not sign (non-negative)\"\n            },\n            {\n              \"Mnemonic\": \"JO\",\n              \"Flag States\": \"OF = 1\",\n              \"Description\": \"overflow\"\n            },\n            {\n              \"Mnemonic\": \"JS\",\n              \"Flag States\": \"SF = 1\",\n              \"Description\": \"sign (negative)\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"notes\": [\n    \"LOOP (Loop While ECX Not Zero) is a conditional jump instruction which decrements the contents of the ECX register before testing for the loop-terminating condition.\",\n    \"If contents of the ECX register are non-zero, the program jumps to the destination specified in the instruction.\",\n    \"The LOOP instruction causes the execution of a block of code to be repeated until the count reaches zero.\",\n    \"When zero is reached, execution is transferred to the instruction immediately following the LOOP instruction.\",\n    \"If the value in the ECX register is zero when the instruction is first called, the count is predecremented to 0FFFFFFFFH and the LOOP runs 2^32 times.\",\n    \"LOOPE (Loop While Equal) and LOOPZ (Loop While Zero) are synonyms for the same instruction.\",\n    \"These instructions are conditional jumps which decrement the contents of the ECX register before testing for the loop-terminating condition.\",\n    \"If the contents of the ECX register are non-zero and the ZF flag is set, the program jumps to the destination specified in the instruction.\",\n    \"When zero is reached or the ZF flag is clear, execution is transferred to the instruction immediately following the LOOPE/LOOPZ instruction.\",\n    \"LOOPNE (Loop While Not Equal) and LOOPNZ (Loop While Not Zero) are synonyms for the same instruction.\",\n    \"These instructions are conditional jumps which decrement the contents of the ECX register before testing for the loop-terminating condition.\",\n    \"If the contents of the ECX register are non-zero and the ZF flag is clear, the program jumps to the destination specified in the instruction.\",\n    \"When zero is reached or the ZF flag is set, execution is transferred to the instruction immediately following the LOOPE/LOOPZ instruction.\"\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": null
+      },
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "created": 1779860983,
+  "model": "gpt-5.4-2026-03-05",
+  "object": "chat.completion",
+  "service_tier": "default",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1273,
+    "prompt_tokens": 1231,
+    "total_tokens": 2504,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 10,
+      "engine_ttft_ms": 434,
+      "engine_ttlt_ms": 13437,
+      "pre_inference_ms": 222,
+      "service_tbt_ms": 10,
+      "service_ttft_ms": 922,
+      "service_ttlt_ms": 13919,
+      "total_duration_ms": 13705,
+      "user_visible_ttft_ms": 700
+    }
+  },
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ]
+}
